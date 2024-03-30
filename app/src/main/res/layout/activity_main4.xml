@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/score_card1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/bg_light_green"
+        android:text="Your Score"
+        android:textColor="@color/prime_back"
+        android:textSize="25sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score_card2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_light_red"
+        android:text="BOT Score"
+        android:textColor="@color/prime_back"
+        android:textSize="25sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/display1"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_card1" />
+
+    <ImageView
+        android:id="@+id/display2"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/display"
+        app:layout_constraintStart_toEndOf="@+id/display1"
+        app:layout_constraintTop_toBottomOf="@+id/score_card1" />
+
+    <ImageView
+        android:id="@+id/display3"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/display"
+        app:layout_constraintEnd_toStartOf="@+id/display4"
+        app:layout_constraintTop_toBottomOf="@+id/score_card2" />
+
+    <ImageView
+        android:id="@+id/display4"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_card2" />
+
+    <TextView
+        android:id="@+id/r_your_runs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/display1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/display1"
+        app:layout_constraintTop_toTopOf="@+id/display1" />
+
+    <TextView
+        android:id="@+id/r_cpu_runs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/display3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/display3"
+        app:layout_constraintTop_toTopOf="@+id/display3" />
+
+    <TextView
+        android:id="@+id/r_your_wickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/display2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/display1"
+        app:layout_constraintTop_toTopOf="@+id/display2" />
+
+    <TextView
+        android:id="@+id/r_cpu_wickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/display4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/display3"
+        app:layout_constraintTop_toTopOf="@+id/display4" />
+
+    <TextView
+        android:id="@+id/y_runs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUNS"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/display1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/display1"
+        app:layout_constraintTop_toBottomOf="@+id/r_your_runs" />
+
+    <TextView
+        android:id="@+id/y_wickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WICKETS"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/display2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/display1"
+        app:layout_constraintTop_toBottomOf="@+id/r_your_wickets" />
+
+    <TextView
+        android:id="@+id/c_runs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUNS"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/display3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/display3"
+        app:layout_constraintTop_toBottomOf="@+id/r_cpu_runs" />
+
+
+    <TextView
+        android:id="@+id/c_wickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WICKETS"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/display4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/display3"
+        app:layout_constraintTop_toBottomOf="@+id/r_cpu_wickets" />
+
+    <TextView
+        android:id="@+id/r_y_overs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/purple_700"
+        android:text="OVERS : 0.0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/display2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/display1"
+        app:layout_constraintTop_toBottomOf="@+id/score_card1" />
+
+    <TextView
+        android:id="@+id/r_c_overs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/purple_700"
+        android:text="OVERS : 0.0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/display4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/display3"
+        app:layout_constraintTop_toBottomOf="@+id/score_card2" />
+
+    <TableLayout
+        android:id="@+id/players_bat_head"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <TableRow android:background="@android:color/holo_purple">
+
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="170dp"
+                android:layout_height="25dp"
+                android:text="Player Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/player_runs"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="Runs"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/player_balls"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="Balls"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/player_sr"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="SR"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_Bat"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/r_y_overs">
+
+        <TableLayout
+            android:id="@+id/players_batting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <TableRow android:background="@android:color/holo_purple">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="25dp"
+                android:text="Player Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="O"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="W"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="R"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="E"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_Bowl"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+        <TableLayout
+            android:id="@+id/players_bowling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></TableLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Batting Card"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView_Bat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Bowling Card"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView_Bat" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView_Bowl" />
+
+    <Button
+        android:id="@+id/rematch"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Rematch"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="HOME"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

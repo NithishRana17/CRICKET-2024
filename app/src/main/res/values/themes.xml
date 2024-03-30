@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Cricket2024" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimaryVariant">@color/teal_200</item>
+        <item name="colorOnPrimary">#9AFAE6</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#5A00B3</item>
+        <item name="colorSecondaryVariant">@color/purple_500</item>
+        <item name="colorOnSecondary">@color/purple_200</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

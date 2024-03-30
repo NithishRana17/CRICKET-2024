@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tutorial_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indian Team: \n\n Select 'Indian Team' to play with Indian players which as pre-defined 11 players.
+        \n\n\n Custom Team: \n\n Select 'Custom Team' to play with the user-defined number of players and names." />
+
+    <!-- You can add more views here such as images, buttons, etc. -->
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<!-- gradient_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Define the gradient -->
+    <gradient
+        android:startColor="#026060"
+        android:endColor="#710202"
+        android:angle="45"/>
+</shape>

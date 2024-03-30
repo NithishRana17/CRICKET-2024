@@ -1,0 +1,22 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape for the spinner -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Background color for the spinner -->
+            <solid android:color="@android:color/white" />
+
+            <!-- Border color and thickness -->
+            <stroke
+                android:width="1dp"
+                android:color="@android:color/black" />
+
+            <!-- Rounded corners -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+    <!-- Drop-down arrow drawable -->
+    <item android:drawable="@drawable/ic_arrow_drop_down"
+        android:gravity="end|center_vertical">
+    </item>
+</layer-list>
